@@ -1,13 +1,16 @@
 *{font-family: 'Noto Sans KR', sans-serif;}
-      .search-container{display: flex; justify-content: center; align-items: center; margin: 50px 0 40px;}
-      .search-container label {font-size: 24px; font-weight: bold; }
-      .search-container input {width: 30%; margin: 0 20px 0;}
-        #search-input{border-radius: 5px;}
-        #search-input:focus {border: 2px solid royalblue; outline: none;}
-        #now-play {display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-bottom: 50px;}
-        #now-play li{list-style: none; max-width: 500px; overflow: hidden; cursor: pointer;} 
-        #now-play li img {display: block; width: 100%; transition: 0.2s;}
-        #now-play li:hover img {transform: scale(1.1);}
-        #now-play li h3 {margin-top: 20px; font-size: 24px; font-weight: bold;}
-        #now-play li p {font-size: 18px; margin-top: 12px; line-height: 1.6;}
-        #now-play li p strong {font-weight: bold;}
+body {background-color: #ABDEE6; color: #333;}
+.search-container{display: flex; justify-content:center; align-items: center; margin: 50px 0 40px; }
+.search-container label {font-size: 24px; font-weight: bold; }
+.search-container input {width: 60%; margin: 0 20px 0; border-radius: 5px; border: 2px solid #22c0d8; height: 28px;}
+.search-container input:focus {border: 2px solid royalblue; outline: none;}
+.search-container button {background-color: #22c0d8; border: none; width: 40px; height: 32px; border-radius: 5px; cursor: pointer; color: #fff; transition: 0.2s;}
+.search-container button:hover {background-color: #74e1f1; color: #333;}
+
+#now-play {display: flex; flex-wrap: wrap; justify-content: center; gap: 40px; margin-bottom: 50px;}
+#now-play li{list-style: none; max-width: 500px; overflow: hidden; cursor: pointer;} 
+#now-play li img {display: block; width: 100%; transition: 0.2s; border-radius: 10px;}
+#now-play li:hover img {transform: scale(1.05);}
+#now-play li h3 {margin-top: 20px; font-size: 24px; font-weight: bold;}
+#now-play li p {font-size: 18px; margin-top: 12px; line-height: 1.6;}
+#now-play li p strong {font-weight: bold;}
