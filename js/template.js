@@ -13,6 +13,7 @@ export default function template(rows){
                                         : row.overview
                                     }
                     </p>
+                    <p><strong>평점</strong> : ${Math.round(row.vote_average*10)/10}
                     <p><strong>개봉일</strong> : ${
                         row.release_date 
                         ? row.release_date
@@ -29,6 +30,7 @@ export default function template(rows){
                                         : row.overview
                                     }
                     </p>
+                    <p><strong>평점</strong> : ${Math.round(row.vote_average*10)/10}
                     <p><strong>개봉일</strong> : ${
                         row.release_date
                         ? row.release_date
