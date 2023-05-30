@@ -36,13 +36,19 @@ import template from "./template.js";
     const searchBtnEl = document.getElementById("search-btn");
 
     //검색함수
-    const search = function () {
+    const search = async function () {
       let searchValue = searchInputEl.value;
-      const copyRows = [...rows];
-      let filteredRows =  copyRows.filter(row => row.title.includes(searchValue))
+      // 처음 받아온 데이터 필터형식
+      // const copyRows = [...rows];
+      // let filteredRows =  copyRows.filter(row => row.title.includes(searchValue))
       
+      // 새로 api 요청해서 검색에 대한 많은 데이터 가져오기
+      const res = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=1609961e6087bc908a47717d3912b94c&language=ko-KR&page=1&query=${searchValue}`)
+      const searchDate = await res.json();
+      let searchRows = searchDate.results;
+      console.log(searchRows)
       //모듈로 템플릿 제작 순회 
-      temp = template(filteredRows);
+      temp = template(searchRows);
 
       //배열 정리후 데이터바인딩
       joinTemp = temp.join("");
