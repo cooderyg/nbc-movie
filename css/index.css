@@ -21,6 +21,6 @@ body {background-color: #ABDEE6; color: #333;}
     .search-container input::placeholder {text-align: center;}
     .search-container button {width: calc(90% + 4px); }
     #now-play li {max-width: 90%; }
-    #now-play li img {margin: 0 auto;height: auto; aspect-ratio: 3/5; max-height: 840px; object-fit: cover;}
+    #now-play li img {margin: 0 auto;height: auto; aspect-ratio: 3/5; max-height: 840px; }
     #now-play li h3 {text-align: center;}
 }
