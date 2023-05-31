@@ -1,23 +1,25 @@
 export default function template(rows){
     return rows.map(
         row =>
-            row.poster_path 
+            //포스터가 있으면 poster url 없다면 Noimg url
+            row.backdrop_path 
             ? `<li data-id=${row.id}>
-                    <img src="https://image.tmdb.org/t/p/original/${row.poster_path}" />
+                    <img src="https://image.tmdb.org/t/p/original${row.backdrop_path}" />
                     <h3>${row.title}</h3>
                     <p><strong>줄거리</strong> : ${
+                                    //줄거리가 없다면 없습니다. 있으면 100글자 넘는지 확인 후 slice
                                     !row.overview
                                     ? "등록된 줄거리가 없습니다..."
-                                    :row.overview.length > 100
-                                        ? row.overview.slice(0, 100) + "..."
+                                    :row.overview.length > 50
+                                        ? row.overview.slice(0, 50) + "..."
                                         : row.overview
                                     }
                     </p>
-                    <p><strong>평점</strong> : ${Math.round(row.vote_average*10)/10}
-                    <p><strong>개봉일</strong> : ${
+                    <p><strong>평점</strong> : ${Math.round(row.vote_average*10)/10} 
+                    <p><strong>개봉일</strong> : ${ 
                         row.release_date 
                         ? row.release_date
-                        : "개봉예정일이 아직 등록되지 않았습니다."
+                        : "개봉예정일이 아직 등록되지 않았습니다." // 아직 제작중이라 개봉일이 없는 경우
                     }
                     </p>
                 </li>`
@@ -25,12 +27,12 @@ export default function template(rows){
                     <img src="/img/noimg.jpg" />
                     <h3>${row.title}</h3>
                     <p><strong>줄거리</strong> : ${
-                                    row.overview.length > 100
-                                        ? row.overview.slice(0, 100) + "..."
+                                    row.overview.length > 50
+                                        ? row.overview.slice(0, 50) + "..."
                                         : row.overview
                                     }
                     </p>
-                    <p><strong>평점</strong> : ${Math.round(row.vote_average*10)/10}
+                    <p><strong>평점</strong> : ${row.vote_average}
                     <p><strong>개봉일</strong> : ${
                         row.release_date
                         ? row.release_date
