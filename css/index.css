@@ -29,7 +29,6 @@ body {background-color: #ABDEE6; color: #333;}
     background-color: rgba(0, 0, 0, 0.8);
 }
 #modal.on {display: flex;}
-#modal button {position: absolute; top: 70px; right: 100px; background: transparent; border: none; font-size: 24px; cursor: pointer;}
 #modal-content {
     max-width: 1200px;
     height: 950px;

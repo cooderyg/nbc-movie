@@ -25,16 +25,13 @@ import template from "./template.js";
 
     //모달 선택자
     const modalEl = document.querySelector("#modal");
-    const modalButtonEl = document.querySelector("#modal button");
     const modalContentEl = document.querySelector("#modal-content");
     
     //모달 닫기
     modalEl.addEventListener("click", function(e){
       if(e.target === this) modalEl.classList.remove("on")
     })
-    modalButtonEl.addEventListener("click", function(){
-      modalEl.classList.remove("on")
-    })
+   
 
     // 모달 클릭 데이터삽입 함수
     clickLi(rows, movieLis, modalEl, modalContentEl);

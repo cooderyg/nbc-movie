@@ -24,7 +24,7 @@ export default function template(rows){
                     </p>
                 </li>`
             :`<li data-id=${row.id}>
-                    <img src="/img/noimg.jpg" />
+                    <img src="/img/noImg.png" />
                     <h3>${row.title}</h3>
                     <p><strong>줄거리</strong> : ${
                                     row.overview.length > 50
