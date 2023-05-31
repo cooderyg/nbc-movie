@@ -14,7 +14,6 @@ body {background-color: #ABDEE6; color: #333;}
 #now-play li h3 {margin-top: 32px; font-size: 24px; font-weight: bold;}
 #now-play li p {font-size: 18px; margin-top: 12px; line-height: 1.6;}
 #now-play li p strong {font-weight: bold;}
-
 #modal {    
     display: none;
     justify-content: center;
