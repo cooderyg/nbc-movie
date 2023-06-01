@@ -4,7 +4,7 @@ export default function template(rows){
             //포스터가 있으면 poster url 없다면 Noimg url
             row.backdrop_path 
             ? `<li data-id=${row.id}>
-                    <img src="https://image.tmdb.org/t/p/original${row.backdrop_path}" />
+                    <img src="https://image.tmdb.org/t/p/w500${row.backdrop_path}" />
                     <h3>${row.title}</h3>
                     <p><strong>줄거리</strong> : ${
                                     //줄거리가 없다면 없습니다. 있으면 100글자 넘는지 확인 후 slice
@@ -27,9 +27,11 @@ export default function template(rows){
                     <img src="/img/noImg.png" />
                     <h3>${row.title}</h3>
                     <p><strong>줄거리</strong> : ${
-                                    row.overview.length > 50
-                                        ? row.overview.slice(0, 50) + "..."
-                                        : row.overview
+                                        !row.overview
+                                        ? "등록된 줄거리가 없습니다..."
+                                        :row.overview.length > 50
+                                            ? row.overview.slice(0, 50) + "..."
+                                            : row.overview
                                     }
                     </p>
                     <p><strong>평점</strong> : ${row.vote_average}

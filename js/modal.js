@@ -18,7 +18,7 @@ export function clickLi(rows, movieLis, modalEl, modalContentEl) {
         findRow.poster_path 
         ?`
         <div>
-              <img src="https://image.tmdb.org/t/p/original${findRow.poster_path}" />
+              <img src="https://image.tmdb.org/t/p/w500${findRow.poster_path}" />
         </div>
         <div>
           <h3>${findRow.title}</h3>
